@@ -10,4 +10,8 @@ class AdminLoginController extends Controller
     public function login(){
         return view('admin.login');
     }
+
+    public function loginProcess(Request $request){
+        return view('admin.dashboard');
+    }
 }

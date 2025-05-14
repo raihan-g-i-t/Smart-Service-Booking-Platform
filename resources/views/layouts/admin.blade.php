@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/admin/layout.css') }}" rel="stylesheet">
+
+    @yield('styles')
 </head>
 <body>
-    
+
+<div class="sidebar">
+    <h4 class="text-white text-center mb-4">Admin</h4>
+    <a href="#">Dashboard</a>
+    <a href="#">Users</a>
+    <a href="#">Settings</a>
+    <a href="#">Reports</a>
+</div>
+
+<nav class="navbar navbar-expand navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+        <span class="navbar-brand">Dashboard</span>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content">
+    @yield('content')
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+@yield('scripts')
 </body>
 </html>

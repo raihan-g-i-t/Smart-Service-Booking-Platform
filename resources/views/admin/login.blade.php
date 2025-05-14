@@ -30,7 +30,8 @@
                             <div class="brand-logo mb-4">YourLogo</div>
                             <h3 class="mb-4">Sign In</h3>
                             
-                            <form>
+                            <form action="{{ route('login.process') }}" method="post">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
                                     <input type="email" class="form-control" id="email" placeholder="Enter your email">
