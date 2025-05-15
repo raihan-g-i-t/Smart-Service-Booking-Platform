@@ -13,10 +13,22 @@
 
 <div class="sidebar">
     <h4 class="text-white text-center mb-4">Admin</h4>
-    <a href="#">Dashboard</a>
-    <a href="#">Users</a>
-    <a href="#">Settings</a>
-    <a href="#">Reports</a>
+    <a href="{{ route('login.process') }}"
+       class="{{ request()->routeIs('admin.dashboard') ? 'bg-primary text-white' : '' }}">
+        Dashboard
+    </a>
+    <a href="#"
+       class="{{ request()->routeIs('admin.users') ? 'bg-primary text-white' : '' }}">
+        Users
+    </a>
+    <a href="#"
+       class="{{ request()->routeIs('admin.settings') ? 'bg-primary text-white' : '' }}">
+        Settings
+    </a>
+    <a href="#"
+       class="{{ request()->routeIs('admin.reports') ? 'bg-primary text-white' : '' }}">
+        Reports
+    </a>
 </div>
 
 <nav class="navbar navbar-expand navbar-light bg-light shadow-sm">
