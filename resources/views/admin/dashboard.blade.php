@@ -9,7 +9,7 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Users</h5>
-                    <p class="card-text">1,245</p>
+                    <!-- <p class="card-text">1,245</p> -->
                 </div>
             </div>
         </div>
