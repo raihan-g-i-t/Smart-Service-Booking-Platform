@@ -54,7 +54,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-login w-100 mb-3">Sign In</button>
                                 
-                                <!-- <div class="divider">
+                                <div class="divider">
                                     <span>OR CONTINUE WITH</span>
                                 </div>
                                 
@@ -68,7 +68,7 @@
                                     <div class="social-btn">
                                         <i class="fab fa-apple"></i>
                                     </div>
-                                </div> -->
+                                </div>
                                 
                                 <div class="text-center">
                                     Don't have an account? <a href="#" class="text-decoration-none">Sign up</a>
