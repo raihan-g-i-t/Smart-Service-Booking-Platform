@@ -58,7 +58,7 @@
                                     <span>OR CONTINUE WITH</span>
                                 </div>
                                 
-                                <div class="d-flex justify-content-center mb-4">
+                                <!-- <div class="d-flex justify-content-center mb-4">
                                     <div class="social-btn">
                                         <i class="fab fa-google"></i>
                                     </div>
@@ -68,7 +68,7 @@
                                     <div class="social-btn">
                                         <i class="fab fa-apple"></i>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                                 <div class="text-center">
                                     Don't have an account? <a href="#" class="text-decoration-none">Sign up</a>
