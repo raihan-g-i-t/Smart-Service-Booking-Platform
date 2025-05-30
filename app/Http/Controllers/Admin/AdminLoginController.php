@@ -13,7 +13,9 @@ class AdminLoginController extends Controller
     }
 
     public function loginProcess(Request $request){
-        $user = count(User::all());
+        $user = count(User::where([
+            'role' => 0
+        ])->get());
         return view('admin.dashboard', ['number' => $user]);
     }
 }
