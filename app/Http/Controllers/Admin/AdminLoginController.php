@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminLoginController extends Controller
@@ -12,6 +13,7 @@ class AdminLoginController extends Controller
     }
 
     public function loginProcess(Request $request){
-        return view('admin.dashboard');
+        $user = count(User::all());
+        return view('admin.dashboard', ['number' => $user]);
     }
 }
