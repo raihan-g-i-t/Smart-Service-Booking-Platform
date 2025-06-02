@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Services\AdminLoginService;
-use Illuminate\Auth\Events\Failed;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AdminLoginController extends Controller
 {
@@ -21,12 +21,17 @@ class AdminLoginController extends Controller
     }
 
     public function loginProcess(Request $request){
-        $data = $request->only('email', 'password');
+        $data = $request->password;
 
-        if(Auth::guard('admin')->attempt($data)){
-            return redirect()->route('admin.dashboard');
+        $user = User::where([
+            'email' => $request->email
+        ])->first();
+
+        if(!$user || !Hash::check($data, $user->password)){
+            echo 'Failed';
         }
-        echo 'Failed';
+        // auth::login($user);
+        return redirect()->route('admin.dashboard');
 
     }
 
