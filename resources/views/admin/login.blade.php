@@ -34,12 +34,12 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email">
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" name="password">
                                         <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                                             <i class="far fa-eye"></i>
                                         </button>

@@ -13,7 +13,7 @@
 
 <div class="sidebar">
     <h4 class="text-white text-center mb-4">Admin</h4>
-    <a href="{{ route('login.process') }}"
+    <a href="{{ route('admin.dashboard') }}"
        class="{{ request()->routeIs('admin.dashboard') ? 'bg-primary text-white' : '' }}">
         Dashboard
     </a>
@@ -25,7 +25,7 @@
        class="{{ request()->routeIs('admin.settings') ? 'bg-primary text-white' : '' }}">
         Settings
     </a>
-    <a href="#"
+    <a href="{{ route('admin.logout') }}"
        class="{{ request()->routeIs('admin.reports') ? 'bg-primary text-white' : '' }}">
         Reports
     </a>
@@ -36,7 +36,7 @@
         <span class="navbar-brand">Dashboard</span>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
+                <a class="nav-link" href="{{ route('admin.logout') }}">Logout</a>
             </li>
         </ul>
     </div>
