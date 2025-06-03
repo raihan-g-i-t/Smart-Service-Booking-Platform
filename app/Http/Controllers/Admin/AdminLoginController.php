@@ -21,16 +21,15 @@ class AdminLoginController extends Controller
     }
 
     public function loginProcess(Request $request){
-        $data = $request->password;
 
         $user = User::where([
             'email' => $request->email
         ])->first();
 
-        if(!$user || !Hash::check($data, $user->password)){
+        if(!$user || !Hash::check($request->password, $user->password)){
             echo 'Failed';
         }
-        // auth::login($user);
+        auth::guard('admin')->login($user);
         return redirect()->route('admin.dashboard');
 
     }
