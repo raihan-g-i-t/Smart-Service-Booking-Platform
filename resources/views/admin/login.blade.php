@@ -99,5 +99,9 @@
             }
         });
     </script>
+
+@if(session('success'))
+    @include('modal');
+@endif
 </body>
 </html>
