@@ -27,11 +27,11 @@ class AdminLoginController extends Controller
         ])->first();
 
         if(!$user || !Hash::check($request->password, $user->password)){
-            echo 'Failed';
+            return redirect()->route('admin.login')->with('success', 'Invalid user');
+        }else{
+            auth::guard('admin')->login($user);
+            return redirect()->route('admin.dashboard');
         }
-        auth::guard('admin')->login($user);
-        return redirect()->route('admin.dashboard');
-
     }
 
     public function dashboard(){
